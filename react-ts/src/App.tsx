@@ -1,15 +1,14 @@
-import React from 'react';
+import {useState} from 'react';
+import NewTodo from './component/NewTodo/NewTodo';
 import Todos from './component/Todos/Todos';
 import Todo from './models/todo';
 
 function App() {
-  const todos = [
-    new Todo('Learn React'),
-    new Todo('New Object'),
-  ]
+  
   
   return (
     <div >
+      <NewTodo onAddTodo={addTodoHander} />
       <Todos items={todos}/>
     </div>
   );

@@ -6,6 +6,7 @@ type TodoProps = {
     children?: ReactNode;
 }
 const Todos = ({items, children}: TodoProps) => {
+    
     console.log(children);
     console.log(items);
     return <ul>
