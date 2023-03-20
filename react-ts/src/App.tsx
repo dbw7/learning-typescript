@@ -1,16 +1,16 @@
-import {useState} from 'react';
-import NewTodo from './component/NewTodo/NewTodo';
+import NewTodo2 from './component/NewTodo/NewTodo2';
 import Todos from './component/Todos/Todos';
-import Todo from './models/todo';
+import TodosContextProvider from './store/todos-context';
+
 
 function App() {
   
   
   return (
-    <div >
-      <NewTodo onAddTodo={addTodoHander} />
-      <Todos items={todos}/>
-    </div>
+    <TodosContextProvider>
+      <NewTodo2 />
+      <Todos />
+    </TodosContextProvider>
   );
 }
 
